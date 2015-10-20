@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  AcronymDecoder
 //
-//  Created by Sonia Reddy Kolli on 10/17/15.
+//  Created by Sonia Reddy Kolli.
 //  Copyright (c) 2015 Sonia Reddy Kolli. All rights reserved.
 //
 

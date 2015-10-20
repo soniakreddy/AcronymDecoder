@@ -2,7 +2,7 @@
 //  ViewController.h
 //  AcronymDecoder
 //
-//  Created by Sonia Reddy Kolli on 10/17/15.
+//  Created by Sonia Reddy Kolli.
 //  Copyright (c) 2015 Sonia Reddy Kolli. All rights reserved.
 //
 
@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *acronymTextField;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *optionsSegmentControl;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
+
+- (IBAction)searchButtonPressed:(id)sender;
 
 @end
 

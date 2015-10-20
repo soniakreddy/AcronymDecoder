@@ -1,25 +1,171 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C47-BY-L15">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Qi6-LM-TFO">
+            <objects>
+                <navigationController id="C47-BY-L15" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wd4-hc-jmU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AW3-36-hvC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDy-wf-TgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="417"/>
+        </scene>
+        <!--Acronym Decoder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcP-Rd-CLq">
+                                <rect key="frame" x="121" y="117" width="88" height="43"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5it-Fg-0X7">
+                                <rect key="frame" x="255" y="175" width="29" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.14509803921568629" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Search.png">
+                                    <color key="titleColor" red="0.69019607843137254" green="0.81960784313725488" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Yw-eX-N5I"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter acronyms" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhd-TS-GC1">
+                                <rect key="frame" x="54" y="175" width="199" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eeL-SN-j7x"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-Hl-LK8">
+                                <rect key="frame" x="135" y="213" width="37" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7R5-cK-qiz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.74117647058823533" green="0.85490196078431369" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Acronym Decoder" id="56W-w1-Nhp"/>
+                    <connections>
+                        <outlet property="acronymTextField" destination="mhd-TS-GC1" id="SpV-i9-lI9"/>
+                        <outlet property="searchButton" destination="5it-Fg-0X7" id="I7e-gu-ZyF"/>
+                        <outlet property="text" destination="mhd-TS-GC1" id="9bY-Jq-4aV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="465" y="417"/>
+        </scene>
+        <!--Acronym View Controller-->
+        <scene sceneID="fLF-TW-rT2">
+            <objects>
+                <viewController storyboardIdentifier="AcronymViewController" automaticallyAdjustsScrollViewInsets="NO" id="E13-YF-LgX" customClass="AcronymViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TZl-mV-sv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="VCK-Gf-anL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Nq-C1-EsO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-B2-B0V">
+                                <rect key="frame" x="0.0" y="45" width="320" height="523"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="E13-YF-LgX" id="5O7-9s-hsa"/>
+                                    <outlet property="delegate" destination="E13-YF-LgX" id="8IG-pq-GNj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.69019607843137254" green="0.81960784313725488" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qsh-B2-B0V" firstAttribute="bottom" secondItem="VCK-Gf-anL" secondAttribute="top" id="WbB-Ef-sf2"/>
+                            <constraint firstItem="qsh-B2-B0V" firstAttribute="top" secondItem="3Nq-C1-EsO" secondAttribute="top" constant="45" id="boC-9J-HG8"/>
+                            <constraint firstItem="qsh-B2-B0V" firstAttribute="leading" secondItem="3Nq-C1-EsO" secondAttribute="leading" id="x0g-JQ-tUF"/>
+                            <constraint firstAttribute="trailing" secondItem="qsh-B2-B0V" secondAttribute="trailing" id="xBf-YK-QOA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblWithSections" destination="qsh-B2-B0V" id="E5p-6o-bNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQu-xa-Ane" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="411"/>
+        </scene>
+        <!--Long Form Variants View Controller-->
+        <scene sceneID="Ydu-tk-Lke">
+            <objects>
+                <viewController storyboardIdentifier="LongFormVariantsViewController" id="RA1-BB-Vfv" customClass="LongFormVariantsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0gV-Tc-rHQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="m6j-pu-J6W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tfq-wA-m3S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tKc-hC-Xdt">
+                                <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RA1-BB-Vfv" id="Z2C-if-kgo"/>
+                                    <outlet property="delegate" destination="RA1-BB-Vfv" id="heW-vC-NJ2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.63137254901960782" green="0.77254901960784317" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tKc-hC-Xdt" firstAttribute="top" secondItem="tfq-wA-m3S" secondAttribute="top" id="GcI-NK-KVy"/>
+                            <constraint firstItem="tKc-hC-Xdt" firstAttribute="bottom" secondItem="m6j-pu-J6W" secondAttribute="top" id="Lxf-Jm-wkx"/>
+                            <constraint firstItem="tKc-hC-Xdt" firstAttribute="leading" secondItem="tfq-wA-m3S" secondAttribute="leading" id="ZmJ-E3-nyh"/>
+                            <constraint firstAttribute="trailing" secondItem="tKc-hC-Xdt" secondAttribute="trailing" id="n6l-EQ-0WD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="longFormView" destination="tKc-hC-Xdt" id="5ii-6y-Ggw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjd-49-BSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="412"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Search.png" width="50" height="50"/>
+    </resources>
 </document>
